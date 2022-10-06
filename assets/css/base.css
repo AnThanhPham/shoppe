@@ -8,6 +8,7 @@
     --header-height:120px;
     --navbar-height: 34px;
     --header-width-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height: 46px;
 }
 
 *{
@@ -24,6 +25,7 @@ html{
 .margin{
     margin-top: 12px!important;
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .margin50px{
@@ -43,16 +45,6 @@ html{
 }
 
 /* Responsive */
-.grid{
-    width: 1200px;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.grid__full-width{
-    width: 100%;
-}
-
 .grid__row{
     display: flex;
     flex-wrap: wrap;
@@ -281,6 +273,7 @@ html{
     justify-content: center;
     align-items: center;
     list-style: none;
+    padding-left: 0;
 }
 
 .pagination-item{

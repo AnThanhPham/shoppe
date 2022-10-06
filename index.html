@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css">
     <link rel="icon" href="./assets/img/icon shoppe.png">
@@ -15,8 +17,8 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="navbar">
+            <div class="grid wide">
+                <nav class="navbar hide-on-mobile-tablet">
                     <ul class="navbar__list">
                         <li class="navbar__list-item navbar__list-item--appear navbar__list-item--separate">
                             Vào cửa hàng trên ứng dụng F8-Shop
@@ -116,7 +118,11 @@
                 </nav>
 
                 <div class="header-with-seacrh">
-                    <div class="header__logo">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="fa-solid fa-magnifying-glass header__mobile-search-icon"></i>
+                    </label>
+
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <svg class="header__logo-img" viewBox="0 0 192 65">
                                 <g fill-rule="evenodd">
@@ -125,6 +131,8 @@
                             </svg>
                         </a>
                     </div>
+
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
 
                     <div class="header-search">
                         <div class="header__search-search">
@@ -355,16 +363,29 @@
                     </div>
                 </div>
             </div>
-
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link header__sort-item--active">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
             <div class="navsearch">
 
             </div>
         </header>
 
         <div class="app__container">
-            <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid__column-2">
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category__heading">
                                 <i class="category__heading-icon fa-solid fa-list"></i>
@@ -390,9 +411,11 @@
                             </ul>
                         </nav>
                     </div>
-    
-                    <div class="grid__column-10">
-                        <div class="home-filter">                           
+                    
+
+
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">                           
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn no-margin">Phổ biến</button>
                             <button class="home-filter__btn btn btn--primary no-margin">Mới nhất</button>
@@ -428,9 +451,58 @@
                             </div>
                         </div>
 
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị cần thiết</a>
+                                </li>
+
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị cần thiết</a>
+                                </li>
+
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị cần thiết</a>
+                                </li>
+
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị cần thiết</a>
+                                </li>
+
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị cần thiết</a>
+                                </li>
+
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị cần thiết</a>
+                                </li>
+
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị cần thiết</a>
+                                </li>
+
+
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị cần thiết</a>
+                                </li>
+
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị cần thiết</a>
+                                </li>
+
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị cần thiết</a>
+                                </li>
+
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị cần thiết</a>
+                                </li>
+                            </ul>
+                        </nav>
+
                         <div class="home-product">
-                            <div class="grid__row">
-                                <div class="grid__column-2-4">
+                            <div class="row sm-gutter">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image:url(https://cf.shopee.vn/file/51b1884f5ce8688c7c1d21e7f2789764_tn);"></div>
                                         <h4 class="home-product-item__name">Áo khoác gió ZUKIK jacket - ZAG</h4>
@@ -466,7 +538,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image:url(https://cf.shopee.vn/file/fd9bb0dcda26399b5712c40dc501605e_tn);"></div>
                                         <h4 class="home-product-item__name">Áo thun tee phông nam nữ tay lỡ oversize form rộng ZUKIK - Clown</h4>
@@ -502,7 +574,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image:url(https://cf.shopee.vn/file/ec4a0f8816c102deda6bc26d7415e55d_tn);"></div>
                                         <h4 class="home-product-item__name">Áo thun tee phông nam nữ tay lỡ oversize form rộng ZUKIK - ZGirl</h4>
@@ -538,7 +610,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image:url(https://cf.shopee.vn/file/e46653425329bc04fbfea134a8a11c9f_tn);"></div>
                                         <h4 class="home-product-item__name">Áo thun tee phông nam nữ tay lỡ oversize form rộng Gangster - ZUKIK</h4>
@@ -574,7 +646,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image:url(https://cf.shopee.vn/file/8ea2b09998a3d3e65b713427b0561bca_tn);"></div>
                                         <h4 class="home-product-item__name">Áo thun tee phông nam nữ tay lỡ oversize form rộng ZUKIK - Fake Smile</h4>
@@ -610,7 +682,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image:url(https://cf.shopee.vn/file/1608712f845a4ea82efd5fb4163af75c_tn);"></div>
                                         <h4 class="home-product-item__name">Áo thun tee phông nam nữ tay lỡ oversize form rộng ZUKIK - Renaissance</h4>
@@ -646,7 +718,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image:url(https://cf.shopee.vn/file/7f510808e4b590dbd395464b6174a7ff_tn);"></div>
                                         <h4 class="home-product-item__name">Áo thun tee phông nam nữ tay lỡ oversize form rộng ZUKIK - Cyber Z</h4>
@@ -682,7 +754,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image:url(https://cf.shopee.vn/file/93e7e0927722de975fafc5efe3f2237a_tn);"></div>
                                         <h4 class="home-product-item__name">Áo thun trơn basic Tee phông trơn nam nữ tay lỡ oversize form rộng - ZUKIK</h4>
@@ -718,7 +790,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image:url(https://cf.shopee.vn/file/82990c31bb723a37bc35b114f91ffa16_tn);"></div>
                                         <h4 class="home-product-item__name">Áo thun tee phông nam nữ tay lỡ oversize form rộng ZUKIK - Queens</h4>
@@ -754,7 +826,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image:url(https://cf.shopee.vn/file/ba6f7aa522d4331e77763eb00a5064a9_tn);"></div>
                                         <h4 class="home-product-item__name">Áo thun tee phông nam nữ tay lỡ oversize form rộng ZUKIK - ZAG</h4>
@@ -841,9 +913,9 @@
         </div>
 
         <footer class="footer">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__column-2-4">
+            <div class="grid wide footer__content">
+                <div class="grid__row c-o-2">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -858,7 +930,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Giới thiệu</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -873,7 +945,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Danh mục</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -889,7 +961,7 @@
                         
                     </div>
 
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Theo dõi</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -913,7 +985,7 @@
                         </ul>                       
                     </div>
 
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-8 c-12">
                         <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                         <div class="footer__download">
                             <img src="./assets/img/qr_code.png" alt="QR" class="footer__download-qr">
@@ -932,7 +1004,7 @@
                 
             </div>
             <div class="footer-bottom">
-                <div class="grid">
+                <div class="grid wide">
                     <div class="grid__row ">
                         <p class="footer__text">© 2022 - Bản quyền thuộc về Công ty TNHH Shopee</p>
                     </div>
